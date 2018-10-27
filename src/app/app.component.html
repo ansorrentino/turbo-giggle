@@ -9,10 +9,7 @@
         routerLinkActive="active">
         {{item.label | translate}}
       </a>
-      <a mat-list-item href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
-        Github
-      </a>
-    </mat-nav-list>
+    </mat-nav-list>      
   </mat-sidenav>
 
   <div class="wrapper">
@@ -30,9 +27,9 @@
         <span routerLink="" class="branding spacer d-none d-md-inline"><img [src]="logo" /></span>
 
         <span>
-          <button mat-button [matMenuTriggerFor]="animals"> {{ 'anms.menu.archivi' | translate }}</button>
+          <button mat-button [matMenuTriggerFor]="archivi" class="d-none d-md-inline spacer"> {{ 'anms.menu.archivi' | translate }}</button>
 
-          <mat-menu class="menu-overflow-hidden" #animals="matMenu">
+          <mat-menu #archivi="matMenu">
             <button mat-menu-item>{{'anms.menu.clienti' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.fornitori' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.agenti' | translate }}</button>
@@ -42,30 +39,23 @@
             <button mat-menu-item>{{'anms.menu.pagamenti' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.voci.iva' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.gestione.taglie' | translate }}</button>
+            <!--
             <button mat-menu-item>{{'anms.menu.gestione.colori' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.unita.misure' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.gestione.banche' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.ricerca.contatti' | translate }}</button>
             <button mat-menu-item>{{'anms.menu.stampe' | translate }}</button>
             <button mat-menu-item [matMenuTriggerFor]="articoli">{{ 'anms.menu.archivi.secondari' | translate }}</button>
+            -->
+
           </mat-menu>
 
           <mat-menu #articoli="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="fish">item1</button>
-            <button mat-menu-item [matMenuTriggerFor]="amphibians">item2</button>
-            <button mat-menu-item [matMenuTriggerFor]="reptiles">item3</button>
-            <button mat-menu-item>Birds</button>
-            <button mat-menu-item>Mammals</button>
-          </mat-menu>
-
-          <mat-menu #articoli="matMenu">
-            <button mat-menu-item>Insects</button>
-            <button mat-menu-item>Molluscs</button>
-            <button mat-menu-item>Crustaceans</button>
-            <button mat-menu-item>Corals</button>
-            <button mat-menu-item>Arachnids</button>
-            <button mat-menu-item>Velvet worms</button>
-            <button mat-menu-item>Horseshoe crabs</button>
+            <button mat-menu-item [matMenuTriggerFor]="item1">item1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">item2</button>
+            <button mat-menu-item [matMenuTriggerFor]="item3">item3</button>
+            <button mat-menu-item>item4</button>
+            <button mat-menu-item>item5</button>
           </mat-menu>
         </span>
 
@@ -94,11 +84,6 @@
         <button mat-icon-button routerLink="settings" class="d-none d-sm-inline">
           <fa-icon icon="cog"></fa-icon>
         </button>
-
-        <a [matTooltip]="'anms.header.github' | translate" matTooltipPosition="before" mat-icon-button class="link d-none d-sm-inline"
-          href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
-          <fa-icon [icon]="['fab','github']"></fa-icon>
-        </a>
 
         <span>
           <mat-select [ngModel]="settings?.language" (selectionChange)="onLanguageSelect($event)">
