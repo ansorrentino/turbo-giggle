@@ -45,13 +45,12 @@ export class AppComponent implements OnInit, OnDestroy {
   logo = require('../assets/logo.png');
   languages = ['it', 'en'];
   navigation = [
-    { link: 'examples', label: 'anms.menu.archivi' },
-    { link: 'features', label: 'anms.menu.contabilita' },
-    { link: 'about', label: 'anms.menu.magazzino' },
+    { link: 'examples', label: 'anms.menu.contabilita' },
+    { link: 'features', label: 'anms.menu.magazzino' },
     { link: 'produzione', label: 'anms.menu.produzione' },
     { link: 'servizio', label: 'anms.menu.servizio' },
     { link: 'finelavoro', label: 'anms.menu.fine-lavoro' },
-    { link: 'personalizzato', label: 'anms.menu.personalizzato' }
+    { link: 'about', label: 'anms.menu.personalizzato' }
   ];
   navigationSideMenu = [
     ...this.navigation,

@@ -58,6 +58,10 @@ mat-sidenav-container {
     }
   }
 
+  .menu-overflow-hidden {
+    overflow: hidden !important;
+  }
+
   .wrapper {
     position: absolute;
     top: 0;
