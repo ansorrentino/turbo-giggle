@@ -119,7 +119,7 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MatSnackBarModule,
     MatSlideToggleModule,
     MatDividerModule,
-
+    MatTreeModule,
     FontAwesomeModule
   ],
   declarations: [BigInputComponent, BigInputActionComponent],
