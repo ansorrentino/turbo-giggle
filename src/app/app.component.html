@@ -9,11 +9,11 @@
         routerLinkActive="active">
         {{item.label | translate}}
       </a>
-    </mat-nav-list>  
+    </mat-nav-list>    
+    <anms-menu-tree></anms-menu-tree>
   </mat-sidenav>
 
   <div class="wrapper">
-
     <div class="toolbar" [style.position]="isHeaderSticky ? 'fixed' : 'inherit'" [class.mat-elevation-z4]="isHeaderSticky">
       <mat-toolbar color="primary">
         <button mat-icon-button class="d-md-none" (click)="sidenav.open()">
@@ -25,6 +25,7 @@
         <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><img [src]="logo" /> </span>
 
         <span routerLink="" class="branding spacer d-none d-md-inline"><img [src]="logo" /></span>
+       
 
         <span>
           <button mat-button [matMenuTriggerFor]="archivi" class="d-none d-md-inline spacer"> {{ 'anms.menu.archivi' | translate }}</button>

@@ -10,6 +10,7 @@ import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuTreeComponent } from './menu-tree/menu-tree.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { AppComponent } from './app.component';
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, MenuTreeComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
