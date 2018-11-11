@@ -1,12 +1,21 @@
 import browser from 'browser-detect';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 import { ActivationEnd, Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Store, select } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MenuTreeComponent } from './menu-tree';
+import { NavItem } from './nav-item';
+import { NavService } from './nav.service';
 
 import {
   ActionAuthLogin,
@@ -36,7 +45,7 @@ import {
 })
 export class AppComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();
-
+  @ViewChild('appDrawer') appDrawer: ElementRef;
   @HostBinding('class') componentCssClass;
 
   isProd = env.production;
@@ -56,6 +65,55 @@ export class AppComponent implements OnInit, OnDestroy {
   navigationSideMenu = [
     ...this.navigation,
     { link: 'settings', label: 'anms.menu.settings' }
+  ];
+
+  navItems: NavItem[] = [
+    {
+      displayName: 'Archivi',
+      iconName: 'recent_actors',
+      children: [
+        {
+          displayName: 'Clienti',
+          iconName: 'group',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Fornitori',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Agenti',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Piano dei conti',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Causali di contabilita',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Pagamenti',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Voci Iva',
+          iconName: 'person',
+          route: 'michael-prentice'
+        },
+        {
+          displayName: 'Gestione taglie',
+          iconName: 'person',
+          route: 'michael-prentice'
+        }
+      ]
+    }
   ];
 
   settings: SettingsState;
