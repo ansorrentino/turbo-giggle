@@ -10,7 +10,6 @@ import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuTreeComponent } from './menu-tree/menu-tree.component';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 
 @NgModule({
@@ -30,7 +29,7 @@ import { MenuListItemComponent } from './menu-list-item/menu-list-item.component
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, MenuTreeComponent, MenuListItemComponent],
+  declarations: [AppComponent, MenuListItemComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -7,20 +7,8 @@ describe('App', () => {
 
   beforeEach(() => (page = new AppPage()));
 
-  it('should redirect to "about" route', () => {
-    page.navigateTo();
-    expect(getCurrentRouteUrl()).toEqual('about');
-  });
-
   it('should display current year in the footer', () => {
     page.navigateTo();
     expect(page.getCurrentYear()).toEqual(new Date().getFullYear().toString());
-  });
-
-  it('should have "Clienti", "Prodotti" menus', () => {
-    page.navigateTo();
-    page
-      .getAllMenus()
-      .then(menus => expect(menus).toEqual(['Clienti', 'Prodotti']));
   });
 });

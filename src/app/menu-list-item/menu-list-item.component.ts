@@ -1,4 +1,10 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  Input,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
 import { NavItem } from '../nav-item';
 import { Router } from '@angular/router';
 import {
@@ -24,7 +30,7 @@ import {
     ])
   ]
 })
-export class MenuListItemComponent {
+export class MenuListItemComponent implements OnInit, OnDestroy {
   expanded: boolean;
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item: NavItem;
@@ -35,6 +41,10 @@ export class MenuListItemComponent {
       this.depth = 0;
     }
   }
+
+  ngOnInit(): void {}
+
+  ngOnDestroy(): void {}
 
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {

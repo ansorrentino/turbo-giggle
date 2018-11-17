@@ -13,9 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Store, select } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MenuTreeComponent } from './menu-tree';
 import { NavItem } from './nav-item';
-import { NavService } from './nav.service';
 
 import {
   ActionAuthLogin,
