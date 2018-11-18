@@ -90,5 +90,11 @@
   "anms.settings.themes.sticky-header": "Sticky header",
   "anms.settings.animations": "Animations",
   "anms.settings.animations.page": "Navigation whole page transition",
-  "anms.settings.animations.elements": "Navigation page elements slide up"
+  "anms.settings.animations.elements": "Navigation page elements slide up",
+  "anms.auth.login.title": "Gestionale",
+  "anms.auth.login.sub.title": "Login Gestionale",
+  "anms.auth.login.placeholder1": "Username",
+  "anms.auth.login.placeholder2": "Password",
+  "anms.auth.login.error1": "obbligatoria",
+  "anms.auth.login.login": "Continua"
 }

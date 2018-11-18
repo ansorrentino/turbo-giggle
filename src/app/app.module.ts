@@ -11,6 +11,7 @@ import { StaticModule } from './static';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { MenuListItemComponent } from './menu-list-item/menu-list-item.component
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, MenuListItemComponent],
+  declarations: [AppComponent, MenuListItemComponent, LoginComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
