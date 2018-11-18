@@ -92,7 +92,7 @@
   "anms.settings.animations.page": "Navigation whole page transition",
   "anms.settings.animations.elements": "Navigation page elements slide up",
   "anms.auth.login.title": "Gestionale",
-  "anms.auth.login.sub.title": "Login Gestionale",
+  "anms.auth.login.sub.title": "Accedi",
   "anms.auth.login.placeholder1": "Username",
   "anms.auth.login.placeholder2": "Password",
   "anms.auth.login.error1": "obbligatoria",
