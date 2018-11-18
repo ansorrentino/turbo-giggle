@@ -28,6 +28,7 @@
   @include anms-styles-reset-theme($theme);
   @include anms-app-component-theme($theme);
   @include anms-about-component-theme($theme);
+  @include anms-login-component-theme($theme);
   @include anms-big-input-component-theme($theme);
   @include anms-todos-container-component-theme($theme);
   @include anms-stock-market-container-component-theme($theme);
